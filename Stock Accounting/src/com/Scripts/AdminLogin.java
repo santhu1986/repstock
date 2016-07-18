@@ -1,0 +1,45 @@
+package com.Scripts;
+
+import org.openqa.selenium.By;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class AdminLogin {
+
+
+	public static void main(String[] args) {
+		String ExpVal="Login";
+		WebDriver driver=new FirefoxDriver();
+		driver.get("http://webapp.qedgetech.com");
+		driver.manage().window().maximize();
+	String actualVal=driver.findElement(By.id("btnsubmit")).getText();
+	      if (ExpVal.equalsIgnoreCase(actualVal))
+	      {
+	    	  System.out.println("stock accounting application launched");
+	    	  			
+		}
+	      else
+	      {
+	    	  System.out.println("Fail");
+	      }
+	      
+		
+		driver.findElement(By.id("btnreset")).click();
+		driver.findElement(By.name("username")).sendKeys("admin");
+		driver.findElement(By.id("password")).sendKeys("master");
+		driver.findElement(By.id("btnsubmit")).click();
+		driver.findElement(By.linkText("Suppliers")).click();
+//	     driver.findElement(By.xpath("glyphicon.glyphicon-plus.ewIcon")).click();
+		
+		//WebElement sit=driver.findElement(By.linkText("Stock Items"));
+		
+		//Actions MA=new Actions(driver);
+		//MA.moveToElement(sit).build().perform();
+		
+//		driver.findElement(By.linkText("Stock Categories")).click();
+	}
+
+}

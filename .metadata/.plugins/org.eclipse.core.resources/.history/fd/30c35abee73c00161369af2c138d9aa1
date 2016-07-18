@@ -1,0 +1,15 @@
+package com.Scripts;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class AdminLogin {
+
+
+	public static void main(String[] args) {
+		
+		WebDriver driver=new FirefoxDriver();
+		
+	}
+
+}
